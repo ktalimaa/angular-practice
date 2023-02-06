@@ -11,8 +11,19 @@ export class AppComponent {
 
   fruits = ["apple", "banana", "strawberry", "pineapple"];    // ngFor in app.component.html    loops
 
+  doggies = ["Tommy", "Muki", "Chester", "Mia"];
+
   showAlertBox() {      // no need of function keyword here, because it is in the class
     alert("Click me is clicked!");
   }
+
+  dogButton() {
+    alert("Woof-woof!");
+  }
+
+  addDog() {
+    this.doggies.push("Good Boy");
+  }
+
 
 }
