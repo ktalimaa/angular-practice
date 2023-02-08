@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {   // OnInit is most important
 
   doggies: Dog [] = [];   // initialize as empty array
   dogNames: string[] = ['Caesar', 'Scooby', 'Shadow'];
+  dogTitle = 'List of Dogs';
 
   fetchDoggos(): Dog[] {
     let doggos: Dog[] = [];

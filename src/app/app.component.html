@@ -498,11 +498,9 @@
   <!--    <button (click)="addDog()">Add Dog</button>-->
   <!--    <p *ngFor="let dog of doggies">{{ doggies }}</p>-->
 
+  <!--  passing values from app.components.ts. tag that calls child component -->
   <div>
-    <ul>
-      <li *ngFor="let dog of doggies">{{ dog.name }}</li>
-    </ul>
-
+    <app-dog [dogTitle]="dogTitle" [doggies]="doggies"></app-dog>
     <p *ngIf="doggies.length <= 2 ">Who let the dogs out?</p>
   </div>
 
