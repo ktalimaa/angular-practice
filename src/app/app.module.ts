@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { DogComponent } from './dog/dog.component';
 import { DogFormComponent } from './dog-form/dog-form.component';
 import {FormsModule} from "@angular/forms";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -12,10 +14,12 @@ import {FormsModule} from "@angular/forms";
     DogComponent,
     DogFormComponent
   ],
-    imports: [
-        BrowserModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

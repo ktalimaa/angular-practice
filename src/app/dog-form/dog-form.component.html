@@ -10,6 +10,8 @@
 <div id="dogFormDiv">
   <h3>Add a new dog</h3>
 <!--  initializing it as angular form-->
+
+<!--  <form id="dogForm" *ngIf="isShowForm">-->
   <form id="dogForm" #dogForm="ngForm" (ngSubmit)="addDog(dogForm)">
     <label for="name">Dog name:</label>
 <!--    create for each input angular model-->

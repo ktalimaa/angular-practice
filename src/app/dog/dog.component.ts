@@ -14,6 +14,7 @@ export class DogComponent implements OnInit{
   @Input() doggies: Dog[] = [];        // importing list of dogs
 
   ngOnInit(): void {
+
   }
 
 }
