@@ -5,13 +5,15 @@
   </ul>
 </div>
 
-// main goal for this form is to add new dog and add it to existing array
-// html form
+<!--main goal for this form is to add new dog and add it to existing array-->
+<!--html form-->
 <div id="dogFormDiv">
   <h3>Add a new dog</h3>
-  <form id="dogForm" #dogForm="ngForm" (ngSubmit)="addDog(dogForm)">   // initializing it as angular form
+<!--  initializing it as angular form-->
+  <form id="dogForm" #dogForm="ngForm" (ngSubmit)="addDog(dogForm)">
     <label for="name">Dog name:</label>
-    <input type="text" name="name" id="name" [(ngModel)]="name"/>    // create for each input angular model
+<!--    create for each input angular model-->
+    <input type="text" name="name" id="name" [(ngModel)]="name"/>
     <br/>
     <label for="type">Type:</label>
     <input type="text" name="type" id="type" [(ngModel)]="type"/>

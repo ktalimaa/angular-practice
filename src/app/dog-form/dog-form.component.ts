@@ -17,6 +17,6 @@ export class DogFormComponent {
 
   addDog(dogForm: NgForm) {
     this.dogs.push(new Dog(this.name, this.type, this.property));
-    dogForm.reset();    // will add all new values
+    dogForm.reset();    // will clear all the values in the form
   }
 }
