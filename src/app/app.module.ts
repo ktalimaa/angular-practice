@@ -21,6 +21,7 @@ import {DashboardModule} from "./dashboard/dashboard.module";
     BrowserAnimationsModule,
     MatTableModule,
     DashboardModule
+    // adding DashboardModule lets use cat components
   ],
   providers: [],
   bootstrap: [AppComponent]

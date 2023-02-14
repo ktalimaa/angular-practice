@@ -1,1 +1,17 @@
-<p>cat works!</p>
+<h1>List of cats</h1>
+<table border="1">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Color</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let cat of cats">
+    <td>{{ cat.name }}</td>
+    <td>{{ cat.type }}</td>
+    <td>{{ cat.color }}</td>
+  </tr>
+  </tbody>
+</table>

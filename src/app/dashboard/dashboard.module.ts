@@ -8,6 +8,9 @@ import { CatComponent } from './cat/cat.component';
   declarations: [
     CatComponent
   ],
+  exports: [
+    CatComponent
+  ],
   imports: [
     CommonModule
   ]
