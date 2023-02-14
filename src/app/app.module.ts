@@ -7,6 +7,7 @@ import { DogFormComponent } from './dog-form/dog-form.component';
 import {FormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from "@angular/material/table";
+import {DashboardModule} from "./dashboard/dashboard.module";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatTableModule} from "@angular/material/table";
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
