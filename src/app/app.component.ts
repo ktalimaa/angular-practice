@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {   // OnInit is most important
   addDog() {
     let dogName = this.dogNames.at(Math.floor(Math.random() * this.dogNames.length)); // math.floor converts number into full number from decimal nr. index cannot be decimal. get random name from list above and assigns it to new dog
     // @ts-ignore
-    this.doggies.push(new Dog(dogName, 'Dalmian', 'Barks louder'));
+    this.doggies.push(new Dog(dogName, 'Dalmatian', 'Barks louder'));
   }
 
 

@@ -1,20 +1,14 @@
 <div id="dogList" *ngIf="dogs.length > 0">
   <h1>List of dynamic dogs</h1>
   <ul>
-    <li *ngFor="let dog of dogs">{{ dog.name }}</li>
+    <li *ngFor="let dog of dogs">{{dog.name}}</li>
   </ul>
 </div>
 
-<!--main goal for this form is to add new dog and add it to existing array-->
-<!--html form-->
-<div id="dogFormDiv">
+<div id="dogFormDiv" *ngIf="isShowForm">
   <h3>Add a new dog</h3>
-<!--  initializing it as angular form-->
-
-<!--  <form id="dogForm" *ngIf="isShowForm">-->
-  <form id="dogForm" #dogForm="ngForm" (ngSubmit)="addDog(dogForm)">
+  <form id="dogForm" #dogForm="ngForm" (ngSubmit)="addDog(dogForm)" >
     <label for="name">Dog name:</label>
-<!--    create for each input angular model-->
     <input type="text" name="name" id="name" [(ngModel)]="name"/>
     <br/>
     <label for="type">Type:</label>
@@ -23,8 +17,7 @@
     <label for="property">Property:</label>
     <input type="text" name="property" id="property" [(ngModel)]="property"/>
     <br/>
-    <button type="submit">Add dog!</button>
+    <button type="submit">Add dog</button>
   </form>
 </div>
-
 

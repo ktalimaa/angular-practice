@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {Dog} from "../shared/models/Dog";
+import {MatTable} from "@angular/material/table";
 
 @Component({
   selector: 'app-dog',
@@ -8,13 +9,25 @@ import {Dog} from "../shared/models/Dog";
 })
 export class DogComponent implements OnInit{
 
-  // elements from another component
+  //input var name and type = initialized var value
+  @Input() dogTitle: string = '';
+  @Input() doggies: Dog[] = [];
+  // Displaying values from one component to another
+  displayedColumns: string[] = ['name', 'type', 'property'];
 
-  @Input() dogTitle: string = '';    // tag that calls parent component. keep in mind that input where initializing value is always default/zero...
-  @Input() doggies: Dog[] = [];        // importing list of dogs
+  // @ts-ignore
+  @ViewChild(MatTable) table: MatTable<Dog>;
 
+  addData() {
+    const randomElementIndex = Math.floor(Math.random() * this.doggies.length);
+    this.doggies.push(this.doggies[randomElementIndex]);
+    this.table.renderRows();
+  }
+  removeData() {
+    this.doggies.pop();
+    this.table.renderRows();
+  }
   ngOnInit(): void {
-
   }
 
 }

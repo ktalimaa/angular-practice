@@ -10,7 +10,7 @@ describe('DogComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ DogComponent ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(DogComponent);
     component = fixture.componentInstance;

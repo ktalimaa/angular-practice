@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import {Dog} from "../shared/models/Dog";
 import {NgForm} from "@angular/forms";
 
@@ -10,14 +10,14 @@ import {NgForm} from "@angular/forms";
 export class DogFormComponent {
 
   dogs: Dog[] = [];
+
   name: string = '';
   type: string = '';
   property: string = '';
   isShowForm: boolean = false;
 
-
   addDog(dogForm: NgForm) {
     this.dogs.push(new Dog(this.name, this.type, this.property));
-    dogForm.reset();    // will clear all the values in the form
+    dogForm.reset(); // clears all the values in the form
   }
 }
