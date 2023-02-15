@@ -11,10 +11,8 @@ export class CatComponent implements OnInit {
   // using cat model from shared here
   cats: Cat[] = [];
 
-
   ngOnInit(): void {
     this.cats.push(new Cat('Purr', 'home cat', 'grey'));
   }
-
 
 }
